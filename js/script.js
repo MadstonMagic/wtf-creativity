@@ -7,7 +7,7 @@ $(document).ready(function() {
 		scrollbars: false,
 		setHeights: false,
 		overflowScroll: true,
-		updateHash: false,
+		updateHash: true,
 		touchScroll: false
 	});
 	
@@ -22,14 +22,18 @@ $(document).ready(function() {
 		
 	$(".toTop").click(function() {
 		
-		$('.blackScreen').fadeIn(1500);
+		$('.blackScreen').fadeIn(1000);
 		
 		function scrollToTop() {			
-			$.scrollify.move("#home");
+			$.scrollify.move("#1");
 		}
 		setTimeout(scrollToTop, 1000);
 		
-		$('.blackScreen').fadeOut(1500);
+		function fadeOutScreen() {
+			$('.blackScreen').fadeOut(1000);
+		}
+		setTimeout(fadeOutScreen, 2000);
+		
 	});
 })
 
